@@ -1,0 +1,280 @@
+/*General*/
+@-webkit-keyframes inicio{
+	
+	0%{
+		margin-top:150%;
+	}
+	60%{
+		margin-top:-5%;
+	}
+	100%{
+		margin-top:0%;
+	}
+}
+body{
+	font-family:'Dancing Script';
+	background-color:#020100;
+	animation: inicio 0.5s;
+}
+
+
+
+.imgSecundaria1,.imgSecundaria2,.irow1,.irow2,.irow3,.irow4,.irow5,.irow6{
+	box-shadow:2px 2px 2px #02010a;
+}
+
+.imgSecundaria1:hover{
+	box-shadow:2px 2px 2px #82c3a6;
+	transform: rotate(10deg);
+	transition:1s;
+}
+.imgSecundaria2:hover{
+	box-shadow:2px 2px 2px #82c3a6;
+	transform:translate(20px, -5px);
+	
+	transition:1s;
+}
+
+.irow1{
+	box-shadow:2px 2px 10px #82c3a6;
+}
+.irow2,.irow4,.irow6{
+	filter: grayscale(100%); 
+}
+.irow3{
+	filter: sepia(90%); 
+}
+
+
+div header{
+	background-color:#5b7989;
+	border-radius:10px 10px 0 0;
+	margin: 0 0 0 0;
+
+}
+div header h1{
+	color:white;
+	text-shadow:2px 2px 2px #02010a;
+}
+div header nav ul li{
+	list-style-type:none;
+	padding:0 20px;
+	float:left;
+}
+div header{
+	width:100%;
+	display:inline-block;
+}
+div header nav ul li a{
+	/*La página actual debe tener estilo sin subrayado. Creo que se hace con pseudoclases o pseudoelementos*/
+	color:white;
+}
+div section a, div section p{
+	text-align:center;
+	color:white;
+}
+
+div #sectionImgCentral{
+	margin:-10px 0 -10px 0;
+	background-color: #82c3a6;
+	width:100%;
+}
+
+.imgCentral{
+	display:block;
+	width:80%;
+	margin:0 auto;
+	padding:0 0 5% 0;
+	
+	
+}
+#sectionImgSecundaria{
+	display:flex;
+	flex-direction:row;
+	margin:-10px 0 -10px 0;
+	padding:10px 0 20px 0;
+	background-color: #d5c75f;
+	width:100%;
+}
+
+
+#cont1{
+	flex-grow:1;
+	width:50%;
+}
+#cont2{
+	flex-grow:1;
+	width:50%;
+}
+.imgSecundaria1{
+	display:block;
+	margin:0 auto;
+	width:90%;
+	
+	/* agrega color de sombra #82c3a6 y borde 2px
+	aplica un efecto de rotación de 10 grados cuando se coloca el puntero sobre ella,
+	*/
+}
+.imgSecundaria2{
+	display:block;
+	margin:0 auto;
+	flex-grow:1;
+	width:90%;
+	/*
+	aplica un efecto de traslación de 5px hacia arriba y 20px a la derecha cuando se coloca el puntero del ratón sobre ella agrega color de sombra #82c3a6 y borde 2px.
+	*/
+}
+
+
+
+
+div footer{
+	background-color: #C6d5c5;
+	border-radius: 0 0 10px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#galeria{
+	background-color: #d5c75f;
+	margin:-5px 0;
+}
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+
+/*Media Query Desktop*/
+@media (min-width: 900px){
+#general{
+	margin:0 auto;
+	width:900px;
+}
+div header h1{
+	float:left;
+	padding:0 0 0 20px;
+}
+div header nav{
+	float:right;
+	font-size:1.7em;
+	
+}
+
+
+
+
+
+
+
+
+
+
+div footer{
+	display:flex;
+	flex-direction:row;
+}
+#contacto,#terminos,#redes,#derechos{
+	flex-grow:1;
+	width:25%;
+	margin:1% 3%;
+}
+
+
+}
+
+#row1{
+	display:flex;
+	flex-flow: row wrap;
+	
+}
+#row2{
+	display:flex;
+	flex-flow: row wrap;
+}
+
+#prow1,#prow2,#prow3,#prow4,#prow5,#prow6{
+	flex-grow:1;
+	width:33.3%;
+}
+.irow1,.irow2,.irow3,.irow4,.irow5,.irow6{
+	display:block;
+	margin:5% auto;
+	width:90%;
+}
+
+/*Media Query Móvil*/
+@media (max-width: 899px){
+div header h1{
+	text-align:center;
+}
+div header nav ul{
+	display:flex;
+	flex-flow:row wrap;
+}
+div header nav ul li{
+	flex-grow:1;
+}
+#contacto,#terminos,#redes,#derechos{
+	
+	margin:1% 3%;
+	padding:5% 0%;;
+}
+
+#sectionImgSecundaria{
+	display:flex;
+	flex-direction:column;
+	margin:-10px 0 -10px 0;
+	padding:10px 0 20px 0;
+	background-color: #d5c75f;
+	width:100%;
+}
+#cont1{
+	flex-grow:1;
+	width:100%;
+}
+#cont2{
+	flex-grow:1;
+	width:100%;
+}
+
+
+
+#row1{
+	display:flex;
+	flex-flow: column wrap;
+	
+}
+#row2{
+	display:flex;
+	flex-flow: column wrap;
+}
+
+#prow1,#prow2,#prow3,#prow4,#prow5,#prow6{
+	flex-grow:1;
+	width:100%;
+}
+.irow1,.irow2,.irow3,.irow4,.irow5,.irow6{
+	display:block;
+	margin:5% auto;
+	width:90%;
+}
+
+
+
+
+}
